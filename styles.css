@@ -1,5 +1,7 @@
 * {
     font-family: sans-serif;
+    list-style-type: none;
+    align-items: left;
 }
 
 .ba {

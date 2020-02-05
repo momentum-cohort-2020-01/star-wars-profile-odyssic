@@ -2,6 +2,7 @@
 
 const dataSection = document.querySelector('#container')
 
+const profileList = document.createElement('ul')
 dataSection.classList.add("mw5", "center", "bg-white", "br3", "pa3", "pa4-ns", "mv3", "ba", "b--black-10")
 
 fetch('https://swapi.co/api/people/55/')
@@ -26,26 +27,28 @@ fetch('https://swapi.co/api/people/55/')
 
         // dataSection.appendChild(homeWorld)
 
-        const birthYear = document.createElement('p')
+
+
+        dataSection.appendChild(profileList)
+
+        const birthYear = document.createElement('li')
         birthYear.innerText = "Date of Birth: " + data.birth_year
-        dataSection.appendChild(birthYear)
+        profileList.appendChild(birthYear)
         birthYear.classList.add("f5", "fw4", "gray", "mt0")
 
-        const height = document.createElement('p')
+        const height = document.createElement('li')
         height.innerText = "Height: " +
             data.height
-        dataSection.appendChild(height)
+        profileList.appendChild(height)
 
         height.classList.add("f5", "fw4", "gray", "mt0")
 
         //starships = none
-        const starShips = document.createElement('p')
+        const starShips = document.createElement('li')
         starShips.innerText = "Starships: None"
-        dataSection.appendChild(starShips)
+        profileList.appendChild(starShips)
 
         starShips.classList.add("f5", "fw4", "gray", "mt0")
-
-
 
     });
 
@@ -56,11 +59,12 @@ fetch('https://swapi.co/api/species/23/')
 
 .then(function(data) {
 
-    let speciesName = document.createElement('p')
+    let speciesName = document.createElement('li')
 
     speciesName.innerText = "Species: " + data.name
 
-    dataSection.appendChild(speciesName)
+    profileList.appendChild(speciesName)
+
     speciesName.classList.add("f5", "fw4", "gray", "mt0")
 
 });
@@ -72,11 +76,11 @@ fetch('https://swapi.co/api/planets/9/')
 
 .then(function(data) {
 
-    let homeWorld = document.createElement('p')
+    let homeWorld = document.createElement('li')
 
     homeWorld.innerText = "Homeworld: " + data.name
 
-    dataSection.appendChild(homeWorld)
+    profileList.appendChild(homeWorld)
 
     homeWorld.classList.add("f5", "fw4", "gray", "mt0")
 
