@@ -5,7 +5,11 @@
 }
 
 h1 {
-    text-align: center
+    text-align: center;
+}
+
+ul {
+    padding-left: 0;
 }
 
 .ba {
