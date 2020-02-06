@@ -1,7 +1,11 @@
 * {
     font-family: sans-serif;
     list-style-type: none;
-    align-items: left;
+    align-items: center;
+}
+
+h1 {
+    text-align: center
 }
 
 .ba {
